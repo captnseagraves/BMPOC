@@ -22,6 +22,11 @@ code {
   padding: 45px 20px;
 }
 
+.cardContainer {
+  display: inline-flex;
+  flex-direction: row;
+}
+
 .pure-button-primary {
   background-color: #0c1a2b;
 }

@@ -1,14 +1,14 @@
 import React, { Component } from 'react'
-import clientListContract from '../build/contracts/ClientList.json'
-import getWeb3 from './utils/getWeb3'
-import Item from './components/Card.js'
+import clientListContract from '../../build/contracts/ClientList.json'
+import getWeb3 from '../utils/getWeb3'
+import {Card, CardTitle} from 'react-materialize'
 
-import './css/oswald.css'
-import './css/open-sans.css'
-import './css/pure-min.css'
-import './App.css'
 
-class App extends Component {
+// import '../css/open-sans.css'
+// import '../css/pure-min.css'
+// import '../App.css'
+
+class Item extends Component {
   constructor(props) {
     super(props)
 
@@ -70,32 +70,14 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
-        <nav className="navbar pure-menu pure-menu-horizontal">
-            <a href="#" className="pure-menu-heading pure-menu-link">Truffle Box</a>
-        </nav>
-
-        <main className="container">
-          <div className="pure-g">
-            <div className="pure-u-1-1">
-              <h1>Good to Go!</h1>
-              <p>Your Truffle Box is installed and ready.</p>
-              <h2>Smart Contract Example</h2>
-              <p>If your contracts compiled and migrated successfully, below will show a stored value of 5 (by default).</p>
-              <p>Try changing the value stored on <strong>line 59</strong> of App.js.</p>
-              <p>The stored value is: {this.state.storageValue}</p>
-
-              <div className="cardContainer">
-                <Item />
-                <Item />
-                <Item />
-              </div>
-            </div>
-          </div>
-        </main>
-      </div>
+      <Card className='small'
+      	header={<CardTitle image='./Kitten.jpg'>Buy this thing!</CardTitle>}
+      	actions={[<a href='#'>Add to Cart</a>]}>
+      	I am a very simple card. I am good at containing small bits of information.
+        I am convenient because I require little markup to use effectively.
+      </Card>
     );
   }
 }
 
-export default App
+export default Item
